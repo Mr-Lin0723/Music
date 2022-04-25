@@ -26,6 +26,20 @@
       })();
       </script>
   </head>
+  <body>微信号：<span id="target">Mr-Lin0723</span>
+<button class="btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn">点击复制</button>    
+</body>    
+<script>    
+    $(document).ready(function(){      
+        var clipboard = new Clipboard('#copy_btn');    
+        clipboard.on('success', function(e) {    
+            alert("微信号复制成功",1500);
+            window.location.href='weixin://';
+            e.clearSelection();    
+            console.log(e.clearSelection);    
+        });    
+    });    
+</script>
   <body>
     <div class="wrapper" id="app">
       <div class="player">
@@ -132,20 +146,5 @@
     </svg>
     <script src="./scripts/vue.js"></script>
     <script src="./scripts/script.js"></script>
-        <title>复制按钮</title>       
-<body>微信号：<span id="target">Mr-Lin0723</span>
-<button class="btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn">点击复制</button>    
-</body>    
-<script>    
-    $(document).ready(function(){      
-        var clipboard = new Clipboard('#copy_btn');    
-        clipboard.on('success', function(e) {    
-            alert("微信号复制成功",1500);
-            window.location.href='weixin://';
-            e.clearSelection();    
-            console.log(e.clearSelection);    
-        });    
-    });    
-</script>
   </body>
 </html>
