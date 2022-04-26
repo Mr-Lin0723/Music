@@ -80,20 +80,9 @@
         <div v-cloak></div>
       </div>
     </div>
-<p align="center">微信号：<span id="target">Mr-Lin0723</span>
-<button class="btn" data-clipboard-action="copy" data-clipboard-target="#target" id="copy_btn">点击复制</button>    
-</p>    
-<script>    
-    $(document).ready(function(){      
-        var clipboard = new Clipboard('#copy_btn');    
-        clipboard.on('success', function(e) {    
-            alert("微信号复制成功",1500);
-            window.location.href='weixin://';
-            e.clearSelection();    
-            console.log(e.clearSelection);    
-        });    
-    });    
-</script>
+<p align="center">微信号：Mr-Lin0723</p>    
+<br>
+<br>
     <svg xmlns="http://www.w3.org/2000/svg" hidden xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
         <symbol id="icon-heart-o" viewBox="0 0 32 32">
